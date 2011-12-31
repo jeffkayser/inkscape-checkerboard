@@ -12,7 +12,7 @@ Copy ```checkerboard.py``` and ```checkerboard.inx``` to the following typical d
 
 ## Usage
 
-1. Open *Extensions* > *Render* > *Checkerboard* from the Inkscape menu
+1. Open *Extensions* > *Render* > *Checkerboard...* from the Inkscape menu
 2. On the *Params* tab, choose the cell size (size of constituent the squares) and number of rows and columns
 3. On the *1st color* and *2nd color* tabs, select the colors for the two sets of squares
 4. Click **Apply**
