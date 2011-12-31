@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """
-Copyright (C) 2011 Jeff Kayser
-
 Inkscape extension to create checkerboard patterns
 
+
+Copyright (C) 2011 Jeff Kayser
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -77,7 +77,7 @@ class Checkerboard(inkex.Effect):
         self.OptionParser.add_option("--tab", action="store", type="string", dest="tab")
         self.OptionParser.add_option("--color1", action="store", type="int", dest="color1")
         self.OptionParser.add_option("--color2", action="store", type="int", dest="color2")
-        self.OptionParser.add_option("--size", action="store", type="float", dest="size")
+        self.OptionParser.add_option("--size", action="store", type="string", dest="size")
         self.OptionParser.add_option("--rows", action="store", type="int", dest="rows")
         self.OptionParser.add_option("--cols", action="store", type="int", dest="cols")
 
@@ -88,7 +88,8 @@ class Checkerboard(inkex.Effect):
 
         rows = self.options.rows
         cols = self.options.cols
-        size = self.options.size
+        # Convert to pixels
+        size = inkex.unittouu(self.options.size)
         color1 = color_rgba(self.options.color1 or 0x000000ff)
         color2 = color_rgba(self.options.color2 or 0x00000000)
         # Center checkerboard within visible viewport
