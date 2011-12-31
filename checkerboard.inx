@@ -6,7 +6,7 @@
   <dependency type="executable" location="extensions">checkerboard.py</dependency>
   <param name="tab" type="notebook">  
     <page name="params" _gui-text="Params">
-      <param name="size" type="string" _gui-text="Size">50</param>
+      <param name="size" type="string" _gui-text="Cell size">50</param>
       <param name="rows" type="int" min="0" max="1000" _gui-text="Rows">10</param>
       <param name="cols" type="int" min="0" max="1000" _gui-text="Columns">10</param>
     </page>
