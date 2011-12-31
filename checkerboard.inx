@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Checkerboard</_name>
+  <id>org.jeffkayser.checkerboard</id>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">checkerboard.py</dependency>
+  <param name="tab" type="notebook">  
+    <page name="params" _gui-text="Params">
+      <param name="size" type="float" min="0" max="1000" _gui-text="Size">50</param>
+      <param name="rows" type="int" min="0" max="1000" _gui-text="Rows">10</param>
+      <param name="cols" type="int" min="0" max="1000" _gui-text="Columns">10</param>
+    </page>
+    <page name="color1" _gui-text="First color">
+      <param name="color1" type="color" _gui-text="Color 1">#000000ff</param>
+    </page>
+    <page name="color2" _gui-text="Second color">
+      <param name="color2" type="color" _gui-text="Color 2">#ffffffff</param>
+    </page>
+    <page name="help" _gui-text="Help">
+      <param name="help_text" type="description">Create a checkerboard</param>
+    </page>
+  </param>
+  <effect>
+    <object-type>all</object-type>
+      <effects-menu>
+        <submenu _name="Render"/>
+      </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">checkerboard.py</command>
+  </script>
+</inkscape-extension>
