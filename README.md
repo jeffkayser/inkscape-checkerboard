@@ -4,7 +4,7 @@ This is a simple [Inkscape](http://inkscape.org/) extension that will generate c
 
 ## Installing
 
-Copy ```checkerboard.py``` and ```checkerboard.inx``` to the following typical directory:
+Copy (or link) ```checkerboard.py``` and ```checkerboard.inx``` to the following typical directory:
 
 - Linux - ```~/.config/inkscape/extensions``` (for your user only); ```/usr/share/inkscape/extensions``` (for all users)
 - OS X - ```/Applications/Inkscape.app/Contents/Resources/extensions```
@@ -13,7 +13,7 @@ Copy ```checkerboard.py``` and ```checkerboard.inx``` to the following typical d
 ## Usage
 
 1. Open *Extensions* > *Render* > *Checkerboard...* from the Inkscape menu
-2. On the *Params* tab, choose the cell size (size of constituent the squares) and number of rows and columns
+2. On the *Params* tab, choose the cell size (size of the constituent squares), number of rows and columns, and whether to add the checkerboard to the current layer (if unchecked, the checkerboard will be added to the root layer)
 3. On the *1st color* and *2nd color* tabs, select the colors for the two sets of squares
 4. Click **Apply**
 
