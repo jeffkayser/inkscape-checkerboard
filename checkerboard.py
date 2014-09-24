@@ -80,11 +80,15 @@ class Checkerboard(inkex.Effect):
         self.OptionParser.add_option("--size", action="store", type="string", dest="size")
         self.OptionParser.add_option("--rows", action="store", type="int", dest="rows")
         self.OptionParser.add_option("--cols", action="store", type="int", dest="cols")
+        self.OptionParser.add_option("--layer", action="store", type="inkbool", dest="layer")
 
     def effect(self):
-        layer = self.current_layer
+        lyr = self.options.layer
         parent = self.document.getroot()
         group = inkex.etree.SubElement(parent, 'g', {'id': 'checkerboard'})
+
+        if lyr:
+          group = inkex.etree.SubElement(self.current_layer, 'g', {'id': 'checkerboard'})
 
         rows = self.options.rows
         cols = self.options.cols

@@ -4,11 +4,12 @@
   <id>org.jeffkayser.checkerboard</id>
   <dependency type="executable" location="extensions">inkex.py</dependency>
   <dependency type="executable" location="extensions">checkerboard.py</dependency>
-  <param name="tab" type="notebook">  
+  <param name="tab" type="notebook">
     <page name="params" _gui-text="Params">
       <param name="size" type="string" _gui-text="Cell size">50</param>
       <param name="rows" type="int" min="0" max="1000" _gui-text="Rows">10</param>
       <param name="cols" type="int" min="0" max="1000" _gui-text="Columns">10</param>
+      <param name="layer"  type="boolean" _gui-text="Create in current layer">true</param>
     </page>
     <page name="color1" _gui-text="1st color">
       <param name="color1" type="color" _gui-text="Color 1">#000000ff</param>
