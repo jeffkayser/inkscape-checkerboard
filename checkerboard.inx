@@ -18,7 +18,21 @@
       <param name="color2" type="color" _gui-text="Color 2">#ffffffff</param>
     </page>
     <page name="help" _gui-text="Help">
-      <param name="help_text" type="description">Create a checkerboard</param>
+        <param name="help_text" type="description">Create a checkerboard
+
+1. On the Params tab, choose the cell size
+    (size of the constituent squares), number
+    of rows and columns, and whether to add
+    the checkerboard to the current layer
+    (if unchecked, the checkerboard will be
+    added to the root layer)
+2. On the 1st color and 2nd color tabs,
+    select the colors for the two sets of
+    squares
+3. Click Apply
+
+More information and source code:
+https://github.com/jeffkayser/inkscape-checkerboard</param>
     </page>
   </param>
   <effect>
