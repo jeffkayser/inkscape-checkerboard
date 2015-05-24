@@ -93,7 +93,10 @@ class Checkerboard(inkex.Effect):
         rows = self.options.rows
         cols = self.options.cols
         # Convert to pixels
-        size = inkex.unittouu(self.options.size)
+        try:
+            size = self.unittouu(self.options.size)
+        except AttributeError:
+            size = inkex.unittouu(self.options.size)
         color1 = color_rgba(self.options.color1 or 0x000000ff)
         color2 = color_rgba(self.options.color2 or 0x00000000)
         # Center checkerboard within visible viewport
